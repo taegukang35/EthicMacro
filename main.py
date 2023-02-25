@@ -20,7 +20,7 @@ driver.find_element(By.XPATH, '//*[@id="content"]/table/tbody/tr[2]/td[3]/a[1]/s
 #driver.implicitly_wait(5)
 
 # 강의 듣기
-start = 10 #시작하는 강의 순서. 기본 1
+start = 1 #시작하는 강의 순서. 기본 1
 for i in range(start + 1, 23):
     driver.find_element(By.XPATH, f'//*[@id="content"]/table/tbody/tr[{i}]/td[4]/a/strong').click()
     driver.implicitly_wait(5)
