@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-# 로그인
+# 로그인: 포탈 간편 인증을 진행하기에 핸드폰 확인해주세요.
 id = "본인포탈아이디여기에"
 driver = webdriver.Chrome()
 driver.get("https://humanrights.kaist.ac.kr/pages/sub/sub0701")
@@ -21,7 +21,7 @@ driver.find_element(By.XPATH, '//*[@id="content"]/table/tbody/tr[2]/td[3]/a[1]/s
 #driver.implicitly_wait(5)
 
 # 강의 듣기
-start = 14 #시작하는 강의 순서. 기본 1
+start = 1 #시작하는 강의 순서를 적어주세요. 처음부터 들으려면 1
 for i in range(start + 1, 23):
     driver.find_element(By.XPATH, f'//*[@id="content"]/table/tbody/tr[{i}]/td[4]/a/strong').click()
     driver.implicitly_wait(5)
